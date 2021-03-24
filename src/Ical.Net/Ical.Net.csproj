@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <LangVersion>8</LangVersion>
-    <PackageVersion>4.2.0</PackageVersion>
+    <VersionPrefix>4.2.0</VersionPrefix>
     <Title>Ical.Net</Title>
     <PackageProjectUrl>https://github.com/rianjs/ical.net</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/rianjs/ical.net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Consolidate-Software/ical.net</RepositoryUrl>
     <PackageReleaseNotes>hhttps://github.com/rianjs/ical.net/blob/master/release-notes.md</PackageReleaseNotes>
     <TargetFrameworks>netstandard2.0;net50</TargetFrameworks>
     <Authors>Rian Stockbower, Douglas Day, &amp; Contributors</Authors>
@@ -14,7 +14,7 @@
     <AssemblyOriginatorKeyFile>..\..\IcalNetStrongnameKey.snk</AssemblyOriginatorKeyFile>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <PackageId>Ical.Net</PackageId>
+    <PackageId>Consolidate.Ical.Net</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>An iCalendar (RFC 5545) library. See https://github.com/rianjs/ical.net for details.</Description>
   </PropertyGroup>
