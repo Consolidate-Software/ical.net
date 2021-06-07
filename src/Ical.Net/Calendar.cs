@@ -17,6 +17,9 @@ namespace Ical.Net
         public static Calendar Load(string iCalendarString)
             => CalendarCollection.Load(new StringReader(iCalendarString)).SingleOrDefault();
 
+        public static Calendar Load(string iCalendarString, bool collectErrors)
+            => CalendarCollection.Load(new StringReader(iCalendarString), collectErrors).SingleOrDefault();
+
         /// <summary>
         /// Loads an <see cref="Calendar"/> from an open stream.
         /// </summary>
