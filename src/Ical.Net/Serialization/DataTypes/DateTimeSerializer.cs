@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Ical.Net.DataTypes;
+using System;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using Ical.Net.DataTypes;
 
 namespace Ical.Net.Serialization.DataTypes
 {
@@ -32,12 +32,12 @@ namespace Ical.Net.Serialization.DataTypes
                     dt = new DateTime(year, month, day, hour, minute, second, kind);
                 }
             }
-            catch {}
+            catch { }
 
             return dt;
         }
 
-        public override Type TargetType => typeof (CalDateTime);
+        public override Type TargetType => typeof(CalDateTime);
 
         public override string SerializeToString(object obj)
         {
@@ -94,7 +94,7 @@ namespace Ical.Net.Serialization.DataTypes
 
         private const RegexOptions _ciCompiled = RegexOptions.Compiled | RegexOptions.IgnoreCase;
         internal static readonly Regex DateOnlyMatch = new Regex(@"^((\d{4})(\d{2})(\d{2}))?$", _ciCompiled);
-        internal static readonly Regex FullDateTimePatternMatch = new Regex(@"^((\d{4})(\d{2})(\d{2}))T((\d{2})(\d{2})(\d{2})(Z)?)$", _ciCompiled);
+        internal static readonly Regex FullDateTimePatternMatch = new Regex(@"^((\d{4})-?(\d{2})-?(\d{2}))T((\d{2})(\d{2})(\d{2})(Z)?)$", _ciCompiled);
 
         public override object Deserialize(TextReader tr)
         {
